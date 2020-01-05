@@ -2,7 +2,9 @@
 A simple search engine based on an Inverted Index with results sorted by TF-IDF and Cosine-Similarity
 
 - Example documents:
-	the brown fox jumped over the brown dog, the lazy brown dog sat in the corner, the red fox bit the lazy dog
+	1. the brown fox jumped over the brown dog
+	2. the lazy brown dog sat in the corner
+	3. the red fox bit the lazy dog
 
 - The starting point of the application is SearchEngine.java. There are two other files (entities): Posting, Document, TermMetrics, ComparableEntity.
 
