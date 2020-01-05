@@ -39,7 +39,7 @@ public class Posting implements Comparable<Posting> {
 
 	// Return TF-IDF
 	public Double getTf_idf() {
-		return tf_idf;
+		return this.tf_idf;
 	}
 
 	// Calculate and set Term Frequency
@@ -63,9 +63,11 @@ public class Posting implements Comparable<Posting> {
 	// Calculate and set IDF
 	public void setInverseDocFreq(Integer N, Integer d) {
 		// System.out.println(N + " - " + d);
-		this.idf = Math.log((double) N / (double) d);
+		// ToDo: Should we change the calculation to 1+log() to avoid divide by 0?
+		this.idf = 1 + Math.log((double) N / (double) d);
 		// System.out.println("idf " + this.idf);
 		this.tf_idf = this.tf * this.idf;
+//		System.out.println(N + " " +  d + " " + this.tf + " " + this.idf +  " " + this.tf_idf);	
 	}
 
 	public Double getTf() {

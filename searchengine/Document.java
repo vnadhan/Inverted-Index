@@ -20,7 +20,8 @@ public class Document {
 		super();
 		this.num_of_words = num_of_words;
 		this.id = id;
-		this.documentIdAsString = "document" + this.id;
+		// documentId starts from 0 , but I would like the string to start like document1, document2, ...
+		this.documentIdAsString = "document" + (this.id + 1);
 		this.text = text;
 	}
 
